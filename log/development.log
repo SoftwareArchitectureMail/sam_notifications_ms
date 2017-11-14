@@ -1,0 +1,232 @@
+Started GET "/" for 127.0.0.1 at 2017-11-12 22:28:37 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (15.7ms)
+Completed 200 OK in 47ms (Views: 26.7ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-12 22:28:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (375.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (250.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (46.9ms)[0m  [1m[34mSELECT GET_LOCK(2808627241692089685, 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUserDevices (20171113033107)
+  [1m[35m (296.9ms)[0m  [1m[35mCREATE TABLE `user_devices` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `username` varchar(255), `device_id` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171113033107')[0m
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateNotifications (20171113033150)
+  [1m[35m (265.6ms)[0m  [1m[35mCREATE TABLE `notifications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `username` varchar(255), `sender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171113033150')[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-11-13 03:35:52', '2017-11-13 03:35:52')[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(2808627241692089685)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-12 22:39:28 -0500
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (31.3ms)
+Completed 200 OK in 125ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_devices" for 127.0.0.1 at 2017-11-12 22:39:49 -0500
+Processing by UserDevicesController#index as */*
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `user_devices`[0m
+  [1m[36mUserDevice Load (0.0ms)[0m  [1m[34mSELECT `user_devices`.* FROM `user_devices`[0m
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:39:58 -0500
+Processing by NotificationsController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `notifications`[0m
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/notifications" for 127.0.0.1 at 2017-11-12 22:40:37 -0500
+Processing by NotificationsController#create as */*
+  Parameters: {"username"=>"test", "sender"=>"test", "notification"=>{"username"=>"test", "sender"=>"test"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `notifications` (`username`, `sender`, `created_at`, `updated_at`) VALUES ('test', 'test', '2017-11-13 03:40:37', '2017-11-13 03:40:37')[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserDevice Load (0.0ms)[0m  [1m[34mSELECT `user_devices`.`device_id` FROM `user_devices` WHERE `user_devices`.`username` = 'test'[0m
+Completed 500 Internal Server Error in 595ms (ActiveRecord: 34.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template notifications/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :soap], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "C:/Users/jsbus/Documents/RubyProjects/sam_notifications_ms/app/views"
+  * "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/wash_out-0.12.0/app/views"
+):
+  
+app/controllers/notifications_controller.rb:60:in `create'
+Started POST "/user_devices" for 127.0.0.1 at 2017-11-12 22:42:11 -0500
+Processing by UserDevicesController#create as */*
+  Parameters: {"username"=>"test", "sender"=>"test", "user_device"=>{"username"=>"test"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 566ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_devices/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :soap], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "C:/Users/jsbus/Documents/RubyProjects/sam_notifications_ms/app/views"
+  * "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/wash_out-0.12.0/app/views"
+):
+  
+app/controllers/user_devices_controller.rb:33:in `create'
+Started POST "/user_devices" for 127.0.0.1 at 2017-11-12 22:42:27 -0500
+Processing by UserDevicesController#create as */*
+  Parameters: {"username"=>"test", "device_id"=>"test", "user_device"=>{"username"=>"test", "device_id"=>"test"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `user_devices` (`username`, `device_id`, `created_at`, `updated_at`) VALUES ('test', 'test', '2017-11-13 03:42:27', '2017-11-13 03:42:27')[0m
+  [1m[35m (86.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 663ms (ActiveRecord: 86.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_devices/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :soap], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "C:/Users/jsbus/Documents/RubyProjects/sam_notifications_ms/app/views"
+  * "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/wash_out-0.12.0/app/views"
+):
+  
+app/controllers/user_devices_controller.rb:30:in `create'
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:47:06 -0500
+  [1m[35m (0.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/notifications" for 127.0.0.1 at 2017-11-12 22:47:17 -0500
+Processing by NotificationsController#create as */*
+  Parameters: {"username"=>"test", "sender"=>"test", "notification"=>{"username"=>"test", "sender"=>"test"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `notifications` (`username`, `sender`, `created_at`, `updated_at`) VALUES ('test', 'test', '2017-11-13 03:47:17', '2017-11-13 03:47:17')[0m
+  [1m[35m (110.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 168ms (Views: 1.7ms | ActiveRecord: 110.3ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:47:22 -0500
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:48:15 -0500
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `is_numeric' for #<NotificationsController:0x000000085d6e68>):
+  
+app/controllers/notifications_controller.rb:9:in `index'
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:48:53 -0500
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `notifications`[0m
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:50:44 -0500
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `notifications`[0m
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/notifications" for 127.0.0.1 at 2017-11-12 22:50:51 -0500
+Processing by NotificationsController#create as */*
+  Parameters: {"username"=>"tes2t", "sender"=>"te2st", "notification"=>{"username"=>"tes2t", "sender"=>"te2st"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `notifications` (`username`, `sender`, `created_at`, `updated_at`) VALUES ('tes2t', 'te2st', '2017-11-13 03:50:52', '2017-11-13 03:50:52')[0m
+  [1m[35m (84.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserDevice Load (0.0ms)[0m  [1m[34mSELECT `user_devices`.`device_id` FROM `user_devices` WHERE `user_devices`.`username` = 'tes2t'[0m
+Completed 500 Internal Server Error in 664ms (ActiveRecord: 87.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template notifications/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :soap], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "C:/Users/jsbus/Documents/RubyProjects/sam_notifications_ms/app/views"
+  * "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/wash_out-0.12.0/app/views"
+):
+  
+app/controllers/notifications_controller.rb:61:in `create'
+Started GET "/notifications" for 127.0.0.1 at 2017-11-12 22:51:00 -0500
+Processing by NotificationsController#index as */*
+  Parameters: {"notification"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `notifications`[0m
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT `notifications`.* FROM `notifications`[0m
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_devices" for 127.0.0.1 at 2017-11-12 22:51:34 -0500
+Processing by UserDevicesController#index as */*
+  Parameters: {"user_device"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `user_devices`[0m
+  [1m[36mUserDevice Load (0.0ms)[0m  [1m[34mSELECT `user_devices`.* FROM `user_devices`[0m
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/user_devices" for 127.0.0.1 at 2017-11-12 22:51:45 -0500
+Processing by UserDevicesController#create as */*
+  Parameters: {"username"=>"tes2t", "device_id"=>"twdase2st", "user_device"=>{"username"=>"tes2t", "device_id"=>"twdase2st"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO `user_devices` (`username`, `device_id`, `created_at`, `updated_at`) VALUES ('tes2t', 'twdase2st', '2017-11-13 03:51:45', '2017-11-13 03:51:45')[0m
+  [1m[35m (94.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 688ms (ActiveRecord: 94.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_devices/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip, :soap], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}. Searched in:
+  * "C:/Users/jsbus/Documents/RubyProjects/sam_notifications_ms/app/views"
+  * "C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/wash_out-0.12.0/app/views"
+):
+  
+app/controllers/user_devices_controller.rb:30:in `create'
+Started GET "/user_devices" for 127.0.0.1 at 2017-11-12 22:51:50 -0500
+Processing by UserDevicesController#index as */*
+  Parameters: {"user_device"=>{}}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `user_devices`[0m
+  [1m[36mUserDevice Load (0.0ms)[0m  [1m[34mSELECT `user_devices`.* FROM `user_devices`[0m
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
